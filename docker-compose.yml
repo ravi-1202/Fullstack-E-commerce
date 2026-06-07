@@ -1,7 +1,7 @@
 services:
   backend:
     build:
-      context: ./backend
+      context: ravisomase7/ecommerce-backend:latest
       dockerfile: Dockerfile
     ports:
       - "8082:8082"
@@ -11,7 +11,7 @@ services:
       - db
   frontend:
     build:
-      context: ./frontend
+      context: ravisomase7/ecommerce-frontend:latest
       dockerfile: Dockerfile
     ports:
       - "3000:80"
