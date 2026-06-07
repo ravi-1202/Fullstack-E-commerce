@@ -1,8 +1,7 @@
 services:
   backend:
-    build:
-      context: ravisomase7/ecommerce-backend:latest
-      dockerfile: Dockerfile
+    image: ravisomase7/ecommerce-backend:latest
+    dockerfile: Dockerfile
     ports:
       - "8082:8082"
     env_file:
@@ -10,9 +9,8 @@ services:
     depends_on:
       - db
   frontend:
-    build:
-      context: ravisomase7/ecommerce-frontend:latest
-      dockerfile: Dockerfile
+    image: ravisomase7/ecommerce-frontend:latest
+    dockerfile: Dockerfile
     ports:
       - "3000:80"
     env_file:
